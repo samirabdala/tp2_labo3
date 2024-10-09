@@ -35,12 +35,11 @@ public class ApiClient {
         }
     }
 
-    // Método para recuperar el usuario guardado desde un archivo
     public static Usuario registrado(Context context) {
-        File file = new File(context.getFilesDir(), FILE_NAME);  // Ubicación del archivo de usuario
+        File file = new File(context.getFilesDir(), FILE_NAME);  
         if (!file.exists()) {
             Log.d("ApiClient", "No se encontró un archivo de usuario.");
-            return null;  // Retorna null si no existe el archivo
+            return null;  
         }
 
         try (
@@ -48,7 +47,7 @@ public class ApiClient {
              BufferedInputStream bis = new BufferedInputStream(fis);
              ObjectInputStream ois = new ObjectInputStream(bis)) {
 
-            Usuario usuario = (Usuario) ois.readObject();  // Deserializamos el objeto Usuario
+            Usuario usuario = (Usuario) ois.readObject(); 
             Log.d("ApiClient", "Usuario recuperado: " + usuario.getMail());
             return usuario;
 
@@ -65,6 +64,7 @@ public class ApiClient {
                 Log.d("ApiClient", "Login exitoso: " + usuario.getMail());
                 return usuario;
             } else {
+            
                 Log.d("ApiClient", "Login fallido. Mail o contraseña incorrectos.");
             }
         } else {
