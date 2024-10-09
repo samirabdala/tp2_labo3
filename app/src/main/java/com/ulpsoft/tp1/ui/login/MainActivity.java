@@ -3,14 +3,9 @@ package com.ulpsoft.tp1.ui.login;
 import android.os.Bundle;
 import android.view.View;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.ulpsoft.tp1.R;
 import com.ulpsoft.tp1.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {

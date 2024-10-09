@@ -8,7 +8,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
-import androidx.lifecycle.MutableLiveData;
 
 import com.ulpsoft.tp1.model.Usuario;
 import com.ulpsoft.tp1.request.ApiClient;
